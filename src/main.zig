@@ -1,5 +1,3 @@
-// TODO: High score in the `update` function in the `Game` struct
-
 const std = @import("std");
 const rand = std.rand;
 const debug = std.debug;
