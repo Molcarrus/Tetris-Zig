@@ -743,6 +743,7 @@ const Game = struct {
  
 pub fn main() !void {
     var game = Game.init();
+
     raylib.InitWindow(screen_width, screen_height, "Tetris");
     defer raylib.CloseWindow();
 
@@ -755,7 +756,7 @@ pub fn main() !void {
     while (!raylib.WindowShouldClose()) {
         game.update();
         raylib.BeginDrawing();
+        defer raylib.EndDrawing();
         game.draw();
-        raylib.EndDrawing();
     }
 }
